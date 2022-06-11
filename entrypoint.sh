@@ -34,7 +34,7 @@ cat << EOF > /etc/xray/config.json
               }
             }
           }
-        },
+        }
       }
     }
   ],
