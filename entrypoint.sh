@@ -18,7 +18,7 @@ cat << EOF > /etc/xray/config.json
         ]
       },
       "streamSettings": {
-        "network": "ws"
+        "network": "tcp"
       }
     }
   ],
