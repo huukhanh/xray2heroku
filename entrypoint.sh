@@ -18,7 +18,23 @@ cat << EOF > /etc/xray/config.json
         ]
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "tcp",
+        "tcpSettings": {
+          "header": {
+            "type": "http",
+            "response": {
+              "version": "1.1",
+              "status": "200",
+              "reason": "OK",
+              "headers": {
+                "Content-Type": ["application/octet-stream", "video/mpeg"],
+                "Transfer-Encoding": ["chunked"],
+                "Connection": ["keep-alive"],
+                "Pragma": "no-cache"
+              }
+            }
+          }
+        },
       }
     }
   ],
