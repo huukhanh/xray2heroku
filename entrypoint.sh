@@ -23,15 +23,11 @@ cat << EOF > /etc/xray/config.json
           "header": {
             "type": "http",
             "response": {
-              "version": "1.1",
+              "version": "1.1",              
+              "method": "GET",
+              "path": ["/"],
               "status": "200",
-              "reason": "OK",
-              "headers": {
-                "Content-Type": ["application/octet-stream", "video/mpeg"],
-                "Transfer-Encoding": ["chunked"],
-                "Connection": ["keep-alive"],
-                "Pragma": "no-cache"
-              }
+              "reason": "OK"
             }
           }
         }
